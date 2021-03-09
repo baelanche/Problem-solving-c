@@ -12,12 +12,6 @@ void search(vector<int> c, int idx, int sum) {
 			cout << c[i] << '\n';
 		return;
 	}
-	c.push_back(a[idx]);
-	sum += a[idx];
-	search(c, idx + 1, sum);
-	c.pop_back();
-	sum -= a[idx];
-	search(c, idx, sum);
 }
 int main() {
 	for (int i = 0; i < 9; i++) {
