@@ -1,19 +1,17 @@
 #include <iostream>
 using namespace std;
-int sum = 0;
-int n, s;
+int n, s, cnt, a[20];
+void backtracking(int, int);
 int main() {
 	cin >> n >> s;
-	int *a = (int *)malloc(sizeof(int) * n);
 	for (int i = 0; i < n; i++)
 		cin >> a[i];
-
-	///bt
-
-	free(a);
+	backtracking(0, 0);
+	cout << cnt;
 }
-
-void backtracking() {
-	if (sum == n) return;
-
+void backtracking(int idx, int sum) {
+	if (idx == n) return;
+	if (sum + a[idx] == s) cnt++;
+	backtracking(idx + 1, sum + a[idx]);
+	backtracking(idx + 1, sum);
 }
