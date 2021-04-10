@@ -15,20 +15,22 @@ a : 전기용품이 꽂힐 순서 정보를 담은 배열
 c : 멀티탭에 어떤 전기용품이 꽂혀있는지에 대한 정보를 담은 배열
 */
 int n, k, a[100], c[100], ans = 0;
-void scan();
+void init();
 void logic();
 int disconnectPlug();
 void print();
 int main() {
-	scan();
+	init();
 	logic();
 	print();
 }
 
-void scan() {
+void init() {
 	cin >> n >> k;
 	for (int i = 0; i < k; i++)
 		cin >> a[i];
+	for (int i = 0; i < n; i++)
+		c[i] = a[i];
 }
 
 void logic() {
@@ -38,7 +40,7 @@ void logic() {
 }
 
 int disconnectPlug() {
-
+	return 0;
 }
 
 void print() {
