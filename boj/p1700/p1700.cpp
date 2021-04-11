@@ -14,9 +14,10 @@ using namespace std;
 a : 전기용품이 꽂힐 순서 정보를 담은 배열
 c : 멀티탭에 어떤 전기용품이 꽂혀있는지에 대한 정보를 담은 배열
 */
-int n, k, a[100], c[100], ans = 0;
+int n, k, a[100], c[100] = { 0, }, ans = 0;
 void init();
 void logic();
+void connectPlug();
 int disconnectPlug();
 void print();
 int main() {
@@ -29,14 +30,19 @@ void init() {
 	cin >> n >> k;
 	for (int i = 0; i < k; i++)
 		cin >> a[i];
-	for (int i = 0; i < n; i++)
-		c[i] = a[i];
 }
 
 void logic() {
 	for (int i = 0; i < k; i++) {
-
+		for (int j = 0; j < n; j++) {
+			//if(c[j] == 0)
+				//connectPlug(a[i], )
+		}
 	}
+}
+
+void connectPlug() {
+
 }
 
 int disconnectPlug() {
